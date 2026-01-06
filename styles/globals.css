@@ -197,6 +197,14 @@ html {
   font-size: var(--font-size);
 }
 
+@media (max-width: 1024px) {
+  html,
+  body,
+  #root {
+    overflow-x: hidden;
+  }
+}
+
 /* Radar role animation keyframes */
 @keyframes drawLine {
   to {
