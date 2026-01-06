@@ -348,13 +348,6 @@ export function RolesWeOffer() {
                             ))}
                           </div>
                         </div>
-
-                        {/* See more link */}
-                        <div className="pt-4">
-                          <button className="text-sm text-[#9CA3AF] hover:text-[#F9FAFB] underline underline-offset-4 transition-colors">
-                            See more example roles
-                          </button>
-                        </div>
                       </div>
                     </div>
                   </Card>
