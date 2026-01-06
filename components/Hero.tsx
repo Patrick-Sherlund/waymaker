@@ -38,7 +38,7 @@ export function Hero() {
       </video>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-[#050505]/75" />
+      <div className="absolute inset-0 bg-[#050505]/45" />
 
       {/* Background Grid */}
       <div className="absolute inset-0 opacity-10">
