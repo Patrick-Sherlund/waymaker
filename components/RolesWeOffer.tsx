@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { Card } from './ui/Card';
 import { Chip } from './ui/Chip';
 import { useMode } from '../contexts/ModeContext';
-import { Briefcase, Code, Brain, Compass, Target, Server, ArrowLeft } from 'lucide-react';
+import { Briefcase, Code, Brain, Compass, Target, Server, ArrowLeft, Cog, TrendingUp } from 'lucide-react';
 
-type LaneId = 'all' | 'executive' | 'engineering' | 'aiml' | 'product' | 'defense' | 'devops';
+type LaneId = 'all' | 'executive' | 'engineering' | 'aiml' | 'product' | 'defense' | 'devops' | 'manufacturing' | 'gtm';
 
 interface Lane {
   id: LaneId;
@@ -124,10 +124,10 @@ export function RolesWeOffer() {
       id: 'devops',
       label: 'DevOps & infrastructure',
       icon: Server,
-      description: isHiringMode 
+      description: isHiringMode
         ? 'Platform engineers and SREs who build and maintain critical systems.'
         : 'Platform engineers and SREs building secure, mission-critical infrastructure.',
-      bullets: isHiringMode 
+      bullets: isHiringMode
         ? [
             'Platform engineers building secure infrastructure.',
             'SREs maintaining mission-critical uptime.',
@@ -139,6 +139,46 @@ export function RolesWeOffer() {
             'Modern tooling in secure, regulated environments.'
           ],
       examples: ['DevOps Engineer', 'SRE', 'Platform Engineer', 'Cloud Architect']
+    },
+    {
+      id: 'manufacturing',
+      label: 'Manufacturing and robotics',
+      icon: Cog,
+      description: isHiringMode
+        ? 'Senior manufacturing engineers, robotics specialists, and operations leaders who innovate in production and automation.'
+        : 'Senior manufacturing engineers, robotics specialists, and operations leaders who innovate in production and automation.',
+      bullets: isHiringMode
+        ? [
+            'Staff+ robotics and manufacturing experts.',
+            'Teams who build scalable robotic systems.',
+            'Operations managers who optimize production at scale.'
+          ]
+        : [
+            'Staff+ robotics and manufacturing experts.',
+            'Teams who build scalable robotic systems.',
+            'Operations managers who optimize production at scale.'
+          ],
+      examples: ['Manufacturing Engineer', 'Robotics Engineer', 'Principal Automation Specialist', 'Operations Manager', 'Hardware Lead']
+    },
+    {
+      id: 'gtm',
+      label: 'Go-to-Market (GTM)',
+      icon: TrendingUp,
+      description: isHiringMode
+        ? 'Senior sales, marketing, and customer leaders who drive revenue and growth.'
+        : 'Senior sales, marketing, and customer leaders who drive revenue and growth.',
+      bullets: isHiringMode
+        ? [
+            'Business operations and revenue architects.',
+            'Teams who launch market-leading strategies.',
+            'Sales managers who scale and optimize pipelines.'
+          ]
+        : [
+            'Business operations and revenue architects.',
+            'Teams who launch market-leading strategies.',
+            'Sales managers who scale and optimize pipelines.'
+          ],
+      examples: ['Account Executive', 'Sales Director', 'Buesiness Development', 'Marketing Manager', 'Growth Lead', 'Customer Success Manager']
     }
   ];
 

@@ -15,7 +15,7 @@ export function Process({ theme = 'dark' }: { theme?: 'light' | 'dark' }) {
       title: 'Align & Engage',
       summary: 'We align on your mission, roles, and success criteria.',
       bullets: [
-        'Sign a master service agreement (MSA).',
+        'Sign a master service agreement (MSA) or Executive Retained Search Agreement.',
         'Clarify hiring priorities, roles, and success criteria.',
         'Agree on cadence, decision-makers, and communication channels.'
       ],

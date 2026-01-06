@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { Chip } from './ui/Chip';
+import { useMode } from '../contexts/ModeContext';
 
 const benImage = '/assets/ben.png';
 const mattImage = '/assets/matt.png';
 
 export function Founders() {
   const [hoveredFounder, setHoveredFounder] = useState<number | null>(null);
+  const { isHiringMode } = useMode();
 
   const founders = [
     {
@@ -20,8 +22,12 @@ export function Founders() {
       name: 'Ben Robinson',
       title: 'CO-FOUNDER',
       tagline: '13+ years in tech recruiting',
-      bio: 'Eight-figure recruiting transactions and hundreds of engineers placed in software, data, AI/ML, QA, and DevOps across Fortune 10 enterprises and early-stage startups. Finance background; metrics-first approach to every search.',
-      tags: ['Executive search', 'Tech recruiting', 'AI/ML hiring'],
+      bio: isHiringMode
+        ? 'Over a decade of experience managing mission-critical recruiting initiatives for Fortune 10 enterprises all the way to early-stage startups.  Career highlights include the placement of hundreds of top professionals in areas of software engineering, AI/ML, and related disciplines. Produced multiple eight figures of recruiting transactions.'
+        : '13+ years of experience guiding candidates through the job application, interview and offer process.  A big believer in aligning candidate skills and motivations with opportunity -  putting the candidate in front of the right opportunity, not simply "an" opportunity.',
+      tags: isHiringMode
+        ? ['Executive search', 'Tech recruiting', 'AI/ML hiring']
+        : ['Executive search', 'Tech recruiting', '400+ candidate offers accepted'],
       image: benImage
     }
   ];
@@ -40,7 +46,7 @@ export function Founders() {
               Led by people who understand both worlds.
             </h2>
             <p className="text-lg text-[#9CA3AF] max-w-[560px]">
-              A recruiter and a Marine Corps officer partnering to build the right teams for defense tech.
+              A Marine Corps officer and professional tech recruiter partnering to build the right teams for defense tech.
             </p>
           </div>
 
@@ -56,14 +62,14 @@ export function Founders() {
               {/* Shared Header Row */}
               <div className="space-y-4 mb-12 pb-8 border-b border-[#2A2A32]">
                 <div className="text-xs uppercase tracking-[0.2em] text-[#6B7280]">
-                  Waymaker Leadership
+                  Waymaker Defense Leadership
                 </div>
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                   <h3 className="text-2xl lg:text-3xl text-[#F9FAFB]">
-                    Ben & Matt Robinson — Co-founders
+                    Matt and Ben Robinson — Co-founders
                   </h3>
                   <div className="inline-flex items-center px-3 py-1.5 rounded-full border border-[#B91C1C]/30 bg-[#B91C1C]/5 w-fit">
-                    <span className="text-xs text-[#9CA3AF]">Tech recruiting + USMC defense tech</span>
+                    <span className="text-xs text-[#9CA3AF]">USMC defense tech + Tech recruiting</span>
                   </div>
                 </div>
               </div>

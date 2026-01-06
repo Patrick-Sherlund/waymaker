@@ -103,46 +103,8 @@ export function SplashPage({ onEnterDefense, onEnterSearch }: SplashPageProps) {
             }}
           >
             <div className="flex flex-col lg:flex-row w-full gap-2 lg:gap-0">
-              
-              {/* Segment 1: Waymaker Search Group */}
-              <div className="relative flex-1">
-                <button
-                  onClick={onEnterSearch}
-                  onMouseEnter={() => setHoveredButton('search')}
-                  onMouseLeave={() => setHoveredButton(null)}
-                  className={`
-                    group w-full h-[54px] rounded-full
-                    flex items-center justify-center px-6
-                    transition-all duration-300 ease-out
-                    ${hoveredButton === 'search' ? 'scale-[1.02] z-10' : 'scale-100 z-0'}
-                  `}
-                  style={{
-                    background: hoveredButton === 'search'
-                      ? 'linear-gradient(to right, #FFFFFF, #F9FAFB)'
-                      : 'linear-gradient(to right, #FAFAFA, #F3F4F6)',
-                    border: hoveredButton === 'search' 
-                      ? '1.5px solid #DC2626'
-                      : '1.5px solid #E5E7EB',
-                    boxShadow: hoveredButton === 'search'
-                      ? 'inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 4px 12px rgba(220, 38, 38, 0.15)'
-                      : 'inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 2px 6px rgba(0, 0, 0, 0.03)'
-                  }}
-                >
-                  <span className={`font-medium text-center transition-colors duration-300 ${
-                    hoveredButton === 'search' ? 'text-[#B91C1C]' : 'text-[#DC2626]'
-                  }`}>
-                    Enter — Waymaker
-                  </span>
-                </button>
-                
-                <Tooltip
-                  show={hoveredButton === 'search'}
-                  title="Waymaker"
-                  description="Executive and technical recruiting across all industries—commercial, dual-use, and cross-sector placements."
-                />
-              </div>
 
-              {/* Segment 2: Waymaker Defense */}
+              {/* Segment 1: Waymaker Defense */}
               <div className="relative flex-1">
                 <button
                   onClick={onEnterDefense}
@@ -167,11 +129,49 @@ export function SplashPage({ onEnterDefense, onEnterSearch }: SplashPageProps) {
                     Enter — Waymaker Defense
                   </span>
                 </button>
-                
+
                 <Tooltip
                   show={hoveredButton === 'defense'}
                   title="Waymaker Defense"
                   description="Specialized recruiting for defense tech, aerospace, and national security—cleared and dual-use talent placement."
+                />
+              </div>
+
+              {/* Segment 2: Waymaker Search Group */}
+              <div className="relative flex-1">
+                <button
+                  onClick={onEnterSearch}
+                  onMouseEnter={() => setHoveredButton('search')}
+                  onMouseLeave={() => setHoveredButton(null)}
+                  className={`
+                    group w-full h-[54px] rounded-full
+                    flex items-center justify-center px-6
+                    transition-all duration-300 ease-out
+                    ${hoveredButton === 'search' ? 'scale-[1.02] z-10' : 'scale-100 z-0'}
+                  `}
+                  style={{
+                    background: hoveredButton === 'search'
+                      ? 'linear-gradient(to right, #FFFFFF, #F9FAFB)'
+                      : 'linear-gradient(to right, #FAFAFA, #F3F4F6)',
+                    border: hoveredButton === 'search'
+                      ? '1.5px solid #DC2626'
+                      : '1.5px solid #E5E7EB',
+                    boxShadow: hoveredButton === 'search'
+                      ? 'inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 4px 12px rgba(220, 38, 38, 0.15)'
+                      : 'inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 2px 6px rgba(0, 0, 0, 0.03)'
+                  }}
+                >
+                  <span className={`font-medium text-center transition-colors duration-300 ${
+                    hoveredButton === 'search' ? 'text-[#B91C1C]' : 'text-[#DC2626]'
+                  }`}>
+                    Enter — Waymaker
+                  </span>
+                </button>
+
+                <Tooltip
+                  show={hoveredButton === 'search'}
+                  title="Waymaker"
+                  description="Executive and technical recruiting across all industries—commercial, dual-use, and cross-sector placements."
                 />
               </div>
 
