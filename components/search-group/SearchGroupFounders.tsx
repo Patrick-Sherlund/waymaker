@@ -247,7 +247,7 @@ export function SearchGroupFounders() {
                           className={`w-full h-full object-cover transition-all duration-300 ${
                             hoveredFounder === 1 ? 'grayscale-0 scale-105' : 'grayscale'
                           }`}
-                          style={{ objectPosition: 'center calc(-10% + 10px)', transform: 'scale(1.5)' }}
+                          style={{ objectPosition: 'center calc(-10% + 11.6px)', transform: 'scale(1.5)' }}
                         />
                       </div>
                     </div>

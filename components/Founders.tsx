@@ -191,7 +191,7 @@ export function Founders() {
                           className={`w-full h-full object-cover transition-all duration-300 ${
                             hoveredFounder === 0 ? 'grayscale-0 scale-105' : 'grayscale'
                           }`}
-                          style={{ objectPosition: 'center -10%', transform: 'scale(1.5)' }}
+                          style={{ objectPosition: 'center calc(-10% + 12px)', transform: 'scale(1.5)' }}
                         />
                       </div>
                     </div>

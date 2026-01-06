@@ -201,7 +201,7 @@ export function RolesWeOffer() {
             </h2>
             <p className="text-lg text-[#9CA3AF] max-w-[560px]">
               {isHiringMode 
-                ? 'Six core lanes of defense-tech hiring. Select a lane to see example roles.'
+                ? 'Core lanes of defense-tech hiring. Select a lane to see example roles.'
                 : 'Six core categories of defense-tech roles. Select a category to see opportunities.'}
             </p>
           </div>
