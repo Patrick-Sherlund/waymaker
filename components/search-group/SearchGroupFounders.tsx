@@ -372,10 +372,10 @@ export function SearchGroupFounders() {
                   {/* Metric 2 */}
                   <div className="text-center space-y-2">
                     <div className="text-2xl lg:text-3xl text-[#DC2626] font-medium">
-                      8-figure
+                      400+
                     </div>
                     <div className="text-xs uppercase tracking-[0.15em] text-[#9CA3AF]">
-                      Recruiting transaction<br />volume
+                      Candidate offers<br />accepted
                     </div>
                   </div>
 

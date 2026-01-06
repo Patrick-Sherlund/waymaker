@@ -824,18 +824,93 @@ const IndustryIllustrations = {
       <path d="M107.5 92.5 L135 115" stroke="#D1D5DB" strokeWidth="1" opacity="0.3" strokeDasharray="2 2" />
     </svg>
   ),
+  energy: () => (
+    <svg viewBox="0 0 240 180" className="w-full h-full" fill="none">
+      {/* Power grid network */}
+      <g opacity="0.9">
+        {/* Central power station */}
+        <circle cx="120" cy="90" r="12" fill="#DC2626" fillOpacity="0.15" stroke="#DC2626" strokeWidth="2.5" />
+        <circle cx="120" cy="90" r="20" stroke="#DC2626" strokeWidth="1" opacity="0.2" />
+        <text x="120" y="93" className="text-[9px]" fill="#DC2626" textAnchor="middle" fontWeight="700">PWR</text>
+
+        {/* Distribution nodes */}
+        <circle cx="50" cy="50" r="6" fill="#FFFFFF" stroke="#9CA3AF" strokeWidth="2" />
+        <circle cx="190" cy="50" r="6" fill="#FFFFFF" stroke="#9CA3AF" strokeWidth="2" />
+        <circle cx="50" cy="130" r="6" fill="#FFFFFF" stroke="#9CA3AF" strokeWidth="2" />
+        <circle cx="190" cy="130" r="6" fill="#FFFFFF" stroke="#9CA3AF" strokeWidth="2" />
+
+        {/* Power lines */}
+        <path d="M108 90 L56 50" stroke="#DC2626" strokeWidth="2.5" strokeDasharray="6 4" opacity="0.4" />
+        <path d="M132 90 L184 50" stroke="#DC2626" strokeWidth="2.5" strokeDasharray="6 4" opacity="0.4" />
+        <path d="M108 90 L56 130" stroke="#9CA3AF" strokeWidth="2" strokeDasharray="6 4" opacity="0.3" />
+        <path d="M132 90 L184 130" stroke="#9CA3AF" strokeWidth="2" strokeDasharray="6 4" opacity="0.3" />
+      </g>
+
+      {/* Energy metrics cards */}
+      <g transform="translate(15, 15)">
+        <rect x="0" y="0" width="70" height="36" rx="8" fill="#FFFFFF" stroke="#E5E7EB" strokeWidth="2" />
+        <text x="35" y="14" className="text-[7px]" fill="#9CA3AF" textAnchor="middle" fontWeight="600">GENERATION</text>
+        <text x="35" y="27" className="text-[13px]" fill="#DC2626" textAnchor="middle" fontWeight="700">847 MW</text>
+      </g>
+
+      <g transform="translate(155, 15)">
+        <rect x="0" y="0" width="70" height="36" rx="8" fill="#FFFFFF" stroke="#E5E7EB" strokeWidth="2" />
+        <text x="35" y="14" className="text-[7px]" fill="#9CA3AF" textAnchor="middle" fontWeight="600">EFFICIENCY</text>
+        <text x="35" y="27" className="text-[13px]" fill="#16A34A" textAnchor="middle" fontWeight="700">94.2%</text>
+      </g>
+
+      {/* Wind turbine */}
+      <g transform="translate(200, 120)">
+        <rect x="-2" y="0" width="4" height="40" fill="#D1D5DB" />
+        <g transform="rotate(0 0 0)">
+          <path d="M0 0 L0 -20 L-3 -18 Z" fill="#DC2626" opacity="0.3" />
+          <path d="M0 0 L17 10 L15 13 Z" fill="#DC2626" opacity="0.3" />
+          <path d="M0 0 L-17 10 L-15 13 Z" fill="#DC2626" opacity="0.3" />
+          <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="4s" repeatCount="indefinite" />
+        </g>
+        <circle cx="0" cy="0" r="3" fill="#DC2626" />
+      </g>
+
+      {/* Solar panels */}
+      <g transform="translate(30, 120)">
+        <rect x="0" y="0" width="28" height="18" rx="2" fill="#DC2626" fillOpacity="0.05" stroke="#DC2626" strokeWidth="2" />
+        <path d="M0 6 L28 6 M0 12 L28 12 M9 0 L9 18 M19 0 L19 18" stroke="#DC2626" strokeWidth="0.5" opacity="0.4" />
+      </g>
+
+      {/* Battery storage */}
+      <g transform="translate(100, 135)">
+        <rect x="0" y="0" width="40" height="24" rx="4" fill="#FFFFFF" stroke="#E5E7EB" strokeWidth="2" />
+        <rect x="40" y="8" width="4" height="8" fill="#E5E7EB" />
+        <rect x="4" y="4" width="32" height="16" rx="2" fill="#16A34A" fillOpacity="0.2" stroke="#16A34A" strokeWidth="1.5" />
+        <rect x="4" y="4" width="24" height="16" rx="2" fill="#16A34A" fillOpacity="0.3" />
+        <text x="20" y="14" className="text-[8px]" fill="#16A34A" textAnchor="middle" fontWeight="700">75%</text>
+      </g>
+
+      {/* Grid status indicator */}
+      <g transform="translate(15, 145)">
+        <rect x="0" y="0" width="60" height="20" rx="6" fill="#F0FDF4" stroke="#16A34A" strokeWidth="1.5" />
+        <circle cx="10" cy="10" r="3" fill="#16A34A">
+          <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+        </circle>
+        <text x="18" y="13" className="text-[7px]" fill="#15803D" fontWeight="700">GRID STABLE</text>
+      </g>
+
+      {/* Background grid */}
+      <g opacity="0.08">
+        <path d="M60 20 L60 160" stroke="#9CA3AF" strokeWidth="0.5" strokeDasharray="2 4" />
+        <path d="M120 20 L120 160" stroke="#9CA3AF" strokeWidth="0.5" strokeDasharray="2 4" />
+        <path d="M180 20 L180 160" stroke="#9CA3AF" strokeWidth="0.5" strokeDasharray="2 4" />
+        <path d="M20 60 L220 60" stroke="#9CA3AF" strokeWidth="0.5" strokeDasharray="2 4" />
+        <path d="M20 120 L220 120" stroke="#9CA3AF" strokeWidth="0.5" strokeDasharray="2 4" />
+      </g>
+    </svg>
+  ),
 };
 
 export function IndustriesWeServe() {
-  const [selectedIndustry, setSelectedIndustry] = useState('aviation');
+  const [selectedIndustry, setSelectedIndustry] = useState('healthcare');
 
   const industries: Industry[] = [
-    {
-      id: 'aviation',
-      title: 'Aviation',
-      description: 'Airlines, aerospace, MRO, and eVTOL companies hiring leaders who keep aircraft, operations, and passengers moving safely.',
-      tags: ['Flight operations', 'Maintenance & MRO', 'Aerospace engineering', 'Safety & compliance', 'Network & operations leadership']
-    },
     {
       id: 'healthcare',
       title: 'Healthcare',
@@ -853,6 +928,12 @@ export function IndustriesWeServe() {
       title: 'Education',
       description: 'Universities, K–12 systems, and edtech companies scaling learning experiences and the platforms behind them.',
       tags: ['Institutional leadership', 'Edtech product', 'Student success', 'Data & analytics', 'IT & infrastructure']
+    },
+    {
+      id: 'aviation',
+      title: 'Aviation',
+      description: 'Airlines, aerospace, MRO, and eVTOL companies hiring leaders who keep aircraft, operations, and passengers moving safely.',
+      tags: ['Flight operations', 'Maintenance & MRO', 'Aerospace engineering', 'Safety & compliance', 'Network & operations leadership']
     },
     {
       id: 'retail',
@@ -877,6 +958,12 @@ export function IndustriesWeServe() {
       title: 'Logistics',
       description: '3PLs, freight, and warehousing companies optimizing networks, operations, and the software that runs them.',
       tags: ['Network operations', 'Warehouse leadership', 'Transportation management', 'Supply chain technology', 'Last-mile delivery']
+    },
+    {
+      id: 'energy',
+      title: 'Energy',
+      description: 'Power generation, renewable energy, and grid operators building leadership for operations, engineering, and sustainability.',
+      tags: ['Power generation', 'Grid operations', 'Renewable energy', 'Energy storage', 'Sustainability & compliance']
     }
   ];
 
@@ -893,7 +980,7 @@ export function IndustriesWeServe() {
               Industries We Serve
             </p>
             <h2 className="text-4xl lg:text-5xl text-[#111827] leading-[1.15]">
-              From aircraft hangars to hospital systems.
+              From hospital systems to Energy logistics
             </h2>
             <p className="text-lg text-[#4B5563] max-w-[560px] mx-auto">
               We help executive and technical teams hire across critical industries.
