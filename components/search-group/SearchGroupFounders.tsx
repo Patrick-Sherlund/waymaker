@@ -12,7 +12,7 @@ export function SearchGroupFounders() {
       name: 'Ben Robinson',
       title: 'CO-FOUNDER',
       tagline: '13+ years in tech recruiting',
-      bio: 'Eight-figure recruiting transactions and hundreds of engineers placed in software, data, AI/ML, QA, and DevOps across Fortune 10 enterprises and early-stage startups. Finance background; metrics-first approach to every search.',
+      bio: 'Over a decade of experience managing mission-critical recruiting initiatives for Fortune 10 enterprises all the way to early-stage startups.  Career highlights include the placement of hundreds of top professionals in areas of software engineering, AI/ML, QA, DevOps, GTM, Engineering and related disciplines. Produced multiple eight figures of recruiting transactions.',
       tags: ['Executive search', 'Tech recruiting', 'AI/ML hiring'],
       image: benImage
     },

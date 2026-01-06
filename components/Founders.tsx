@@ -23,8 +23,8 @@ export function Founders() {
       title: 'CO-FOUNDER',
       tagline: '13+ years in tech recruiting',
       bio: isHiringMode
-        ? 'Over a decade of experience managing mission-critical recruiting initiatives for Fortune 10 enterprises all the way to early-stage startups.  Career highlights include the placement of hundreds of top professionals in areas of software engineering, AI/ML, and related disciplines. Produced multiple eight figures of recruiting transactions.'
-        : '13+ years of experience guiding candidates through the job application, interview and offer process.  A big believer in aligning candidate skills and motivations with opportunity -  putting the candidate in front of the right opportunity, not simply "an" opportunity.',
+        ? 'Eight-figure recruiting transactions and hundreds of engineers placed in software, data, AI/ML, QA, and DevOps across Fortune 10 enterprises and early-stage startups. Finance background; metrics-first approach to every search.'
+        : 'Over a decade of experience managing mission-critical recruiting initiatives for Fortune 10 enterprises all the way to early-stage startups.  Career highlights include the placement of hundreds of top professionals in areas of software engineering, AI/ML, QA, DevOps, GTM, Engineering and related disciplines. Produced multiple eight figures of recruiting transactions.',
       tags: isHiringMode
         ? ['Executive search', 'Tech recruiting', 'AI/ML hiring']
         : ['Executive search', 'Tech recruiting', '400+ candidate offers accepted'],
