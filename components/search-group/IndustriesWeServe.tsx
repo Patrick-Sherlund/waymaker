@@ -980,7 +980,7 @@ export function IndustriesWeServe() {
               Industries We Serve
             </p>
             <h2 className="text-4xl lg:text-5xl text-[#111827] leading-[1.15]">
-              From hospital systems to Energy logistics
+              From hospital systems to energy logistics
             </h2>
             <p className="text-lg text-[#4B5563] max-w-[560px] mx-auto">
               We help executive and technical teams hire across critical industries.

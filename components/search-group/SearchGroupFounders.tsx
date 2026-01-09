@@ -39,9 +39,6 @@ export function SearchGroupFounders() {
             <h2 className="text-4xl lg:text-5xl text-[#111827] leading-[1.15] max-w-[760px]">
               Led by people who understand both worlds.
             </h2>
-            <p className="text-lg text-[#4B5563] max-w-[560px]">
-              A recruiter and a Marine Corps officer partnering to build the right teams for critical industries.
-            </p>
           </div>
 
           {/* Main Co-Founders Card */}
@@ -59,9 +56,6 @@ export function SearchGroupFounders() {
                   Waymaker Leadership
                 </div>
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-                  <h3 className="text-2xl lg:text-3xl text-[#111827]">
-                    Ben & Matt Robinson — Co-founders
-                  </h3>
                 </div>
               </div>
 
@@ -356,7 +350,7 @@ export function SearchGroupFounders() {
               </div>
 
               {/* Joint Metrics Strip */}
-              <div className="pt-8 border-t border-[#E5E7EB]">
+              <div className="pt-8">
                 <div className="grid grid-cols-3 gap-8">
                   
                   {/* Metric 1 */}

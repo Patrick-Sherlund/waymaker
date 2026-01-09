@@ -23,7 +23,7 @@ export function Founders() {
       title: 'CO-FOUNDER',
       tagline: '13+ years in tech recruiting',
       bio: isHiringMode
-        ? 'Eight-figure recruiting transactions and hundreds of engineers placed in software, data, AI/ML, QA, and DevOps across Fortune 10 enterprises and early-stage startups. Finance background; metrics-first approach to every search.'
+        ? 'Eight-figure recruiting transactions and hundreds of engineers placed in software, data, AI/ML, QA, and DevOps across Fortune 10 enterprises and early-stage startups. Finance background.'
         : 'Over a decade of experience managing mission-critical recruiting initiatives for Fortune 10 enterprises all the way to early-stage startups.  Career highlights include the placement of hundreds of top professionals in areas of software engineering, AI/ML, QA, DevOps, GTM, Engineering and related disciplines. Produced multiple eight figures of recruiting transactions.',
       tags: isHiringMode
         ? ['Executive search', 'Tech recruiting', 'AI/ML hiring']
@@ -45,9 +45,6 @@ export function Founders() {
             <h2 className="text-4xl lg:text-5xl text-[#F9FAFB] leading-[1.15] max-w-[760px]">
               Led by people who understand both worlds.
             </h2>
-            <p className="text-lg text-[#9CA3AF] max-w-[560px]">
-              A Marine Corps officer and professional tech recruiter partnering to build the right teams for defense tech.
-            </p>
           </div>
 
           {/* Main Co-Founders Card */}
@@ -63,14 +60,6 @@ export function Founders() {
               <div className="space-y-4 mb-12 pb-8 border-b border-[#2A2A32]">
                 <div className="text-xs uppercase tracking-[0.2em] text-[#6B7280]">
                   Waymaker Defense Leadership
-                </div>
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-                  <h3 className="text-2xl lg:text-3xl text-[#F9FAFB]">
-                    Matt and Ben Robinson — Co-founders
-                  </h3>
-                  <div className="inline-flex items-center px-3 py-1.5 rounded-full border border-[#B91C1C]/30 bg-[#B91C1C]/5 w-fit">
-                    <span className="text-xs text-[#9CA3AF]">USMC defense tech + Tech recruiting</span>
-                  </div>
                 </div>
               </div>
 
@@ -372,8 +361,8 @@ export function Founders() {
               </div>
 
               {/* Joint Metrics Strip */}
-              <div className="pt-8 border-t border-[#2A2A32]">
-                <div className="grid grid-cols-3 gap-8">
+              <div className="pt-8 ">
+                <div className="grid grid-cols-3 gap-12 lg:gap-8">
                   
                   {/* Metric 1 */}
                   <div className="text-center space-y-2">
@@ -387,7 +376,7 @@ export function Founders() {
 
                   {/* Metric 2 */}
                   <div className="text-center space-y-2">
-                    <div className="text-2xl lg:text-3xl text-[#B91C1C] font-medium">
+                    <div className="text-2xl lg:text-3xl text-[#B91C1C] font-medium whitespace-nowrap">
                       8-figure
                     </div>
                     <div className="text-xs uppercase tracking-[0.15em] text-[#9CA3AF]">
