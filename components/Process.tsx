@@ -138,7 +138,7 @@ export function Process({ theme = 'dark' }: { theme?: 'light' | 'dark' }) {
 
         {/* Desktop: Two-Column Layout */}
         <div className="hidden lg:block">
-          <div className="grid grid-cols-[35%_65%] gap-16 relative">
+          <div className="grid grid-cols-[35%_60%] gap-16 relative">
             
             {/* Left Column: Sticky Spine */}
             <div className="relative">
@@ -241,7 +241,6 @@ export function Process({ theme = 'dark' }: { theme?: 'light' | 'dark' }) {
                         ? theme === 'light' ? 'text-[#DC2626]/8' : 'text-[#B91C1C]/10'
                         : theme === 'light' ? 'text-[#E5E7EB]/50' : 'text-[#2A2A32]/50'
                     }`}>
-                      {step.number}
                     </div>
 
                     {/* Content */}
