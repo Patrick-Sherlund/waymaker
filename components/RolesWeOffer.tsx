@@ -199,11 +199,6 @@ export function RolesWeOffer() {
                 ? 'From boardroom strategy to deployed systems.'
                 : 'Curated opportunities in defense tech.'}
             </h2>
-            <p className="text-lg text-[#9CA3AF] max-w-[560px]">
-              {isHiringMode 
-                ? 'Core lanes of defense-tech hiring. Select a lane to see example roles.'
-                : 'Six core categories of defense-tech roles. Select a category to see opportunities.'}
-            </p>
           </div>
 
           {/* Lane Selector */}

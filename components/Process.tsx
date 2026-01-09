@@ -129,11 +129,6 @@ export function Process({ theme = 'dark' }: { theme?: 'light' | 'dark' }) {
               ? 'A clear, rigorous hiring pipeline.'
               : 'A white-glove candidate experience.'}
           </h2>
-          <p className={`text-lg max-w-[560px] ${theme === 'light' ? 'text-[#4B5563]' : 'text-[#9CA3AF]'}`}>
-            {isHiringMode
-              ? 'Scroll to move from first conversation to hired.'
-              : 'Scroll to see your journey from introduction to new role.'}
-          </p>
         </div>
 
         {/* Desktop: Two-Column Layout */}
