@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Chip } from './ui/Chip';
 import { useMode } from '../contexts/ModeContext';
 
@@ -8,6 +8,48 @@ const mattImage = '/assets/matt.png';
 export function Founders() {
   const [hoveredFounder, setHoveredFounder] = useState<number | null>(null);
   const { isHiringMode } = useMode();
+  const benRef = useRef<HTMLDivElement>(null);
+  const mattRef = useRef<HTMLDivElement>(null);
+
+  // Scroll-based activation for mobile
+  useEffect(() => {
+    const isMobile = window.innerWidth < 1024;
+    if (!isMobile) return;
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-45% 0px -45% 0px', // Trigger when element is in middle 10% of viewport
+      threshold: [0, 0.5, 1]
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target === benRef.current) {
+            setHoveredFounder(0);
+          } else if (entry.target === mattRef.current) {
+            setHoveredFounder(1);
+          }
+        } else {
+          // When element leaves viewport, set to null (gray)
+          if (entry.target === benRef.current && hoveredFounder === 0) {
+            setHoveredFounder(null);
+          } else if (entry.target === mattRef.current && hoveredFounder === 1) {
+            setHoveredFounder(null);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    if (benRef.current) observer.observe(benRef.current);
+    if (mattRef.current) observer.observe(mattRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [hoveredFounder]);
 
   const founders = [
     {
@@ -159,12 +201,11 @@ export function Founders() {
 
               {/* Mobile View - Complete Founder Blocks */}
               <div className="lg:hidden space-y-12 mb-12 pb-12 border-b border-[#2A2A32]">
-                
+
                 {/* Ben Robinson - Complete Block */}
-                <div 
+                <div
+                  ref={benRef}
                   className="space-y-6"
-                  onMouseEnter={() => setHoveredFounder(0)}
-                  onMouseLeave={() => setHoveredFounder(null)}
                 >
                   {/* Portrait */}
                   <div className="flex flex-col items-center text-center space-y-4">
@@ -227,10 +268,9 @@ export function Founders() {
                 <div className="h-px bg-gradient-to-r from-transparent via-[#2A2A32] to-transparent" />
 
                 {/* Matt Robinson - Complete Block */}
-                <div 
+                <div
+                  ref={mattRef}
                   className="space-y-6"
-                  onMouseEnter={() => setHoveredFounder(1)}
-                  onMouseLeave={() => setHoveredFounder(null)}
                 >
                   {/* Portrait */}
                   <div className="flex flex-col items-center text-center space-y-4">
